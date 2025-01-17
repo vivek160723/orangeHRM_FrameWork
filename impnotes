@@ -1,0 +1,2 @@
+pytest --alluredir=reports/allure_reports
+pytest -v -s /Users/vivekkumar/orangeHRM/tests/test_search.py --html=/Users/vivekkumar/orangeHRM/reports/test_report.html

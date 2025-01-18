@@ -1,0 +1,106 @@
+# Testing Framework for Orange HRM
+
+Welcome to the **Orange HRM Automation Testing Framework**! This project leverages Selenium and Python to automate testing on the Orange HRM demo website. It integrates modern reporting tools such as Allure, HTML reports, and Alva reports to ensure comprehensive and insightful test results. Built using `pytest`, this framework aims to streamline the testing process and ensure robust validation of application functionality.
+
+## Features
+
+- **Selenium-Powered Automation**: Automates testing of the Orange HRM demo website.
+- **Test Structure**: Organized test package with separate page files for a clean and maintainable structure.
+- **Reports Integration**:
+  - Allure Reports
+  - HTML Reports
+  - Alva Reports
+- **Logging**: Includes detailed logs for better debugging and traceability.
+- **Ease of Use**: Simple setup and execution process using `pytest`.
+
+## Prerequisites
+
+To use this framework, ensure the following dependencies and tools are installed:
+
+- **Python**: Version 3.8 or above.
+- **PyCharm**: (Recommended IDE).
+- **Selenium**: For web automation.
+- **pytest**: For running the tests.
+- **Allure CLI**: For generating Allure reports.
+- **pip**: For managing Python packages.
+
+## Installation
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/orange-hrm-testing-framework.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd orange-hrm-testing-framework
+   ```
+3. Install required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Project Structure
+
+```plaintext
+├── tests
+│   ├── test_searchuser.py  # Test cases for search user functionality
+├── pages
+│   ├── search_user.py      # Page object model for search user functionality
+├── reports
+│   ├── allure-results
+│   ├── html-reports
+│   ├── alva-logs
+├── utils
+│   ├── logger.py           # Logging utility
+│   ├── config.py           # Configuration settings
+├── requirements.txt        # Python dependencies
+└── README.md               # Documentation
+```
+
+## Usage
+
+### Running Tests
+To execute the test cases:
+```bash
+pytest --html=reports/html-reports/report.html --self-contained-html
+```
+
+### Generating Allure Reports
+1. Run tests with Allure options:
+   ```bash
+   pytest --alluredir=reports/allure-results
+   ```
+2. Generate the Allure report:
+   ```bash
+   allure serve reports/allure-results
+   ```
+
+### Viewing Alva Logs
+Logs are automatically generated during test execution and saved in the `reports/alva-logs` directory.
+
+## Contribution
+
+Contributions are welcome! Please follow these steps:
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add your message here"
+   ```
+4. Push to your branch:
+   ```bash
+   git push origin feature-name
+   ```
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Acknowledgments
+
+- Orange HRM for providing the demo site.
+- Selenium, pytest, Allure, and other libraries used in this project.

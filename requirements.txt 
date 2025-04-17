@@ -2,3 +2,4 @@ selenium
 pytest
 allure-pytest
 pytest-html
+allure-commandline
